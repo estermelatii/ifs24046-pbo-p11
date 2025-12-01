@@ -107,30 +107,35 @@
             </tbody>
           </table>
 
-          <!-- Summary Section -->
           <div class="row mt-4">
-            <div class="col-md-4">
-              <div class="card bg-success text-white">
-                <div class="card-body">
-                  <h5 class="card-title">Total Pemasukan</h5>
-                  <h3 th:text="${'Rp ' + #numbers.formatDecimal(totalInflow, 0, 'COMMA', 0, 'POINT')}"></h3>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card bg-danger text-white">
-                <div class="card-body">
-                  <h5 class="card-title">Total Pengeluaran</h5>
-                  <h3 th:text="${'Rp ' + #numbers.formatDecimal(totalOutflow, 0, 'COMMA', 0, 'POINT')}"></h3>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card bg-primary text-white">
-                <div class="card-body">
-                  <h5 class="card-title">Saldo</h5>
-                  <h3 th:text="${'Rp ' + #numbers.formatDecimal(balance, 0, 'COMMA', 0, 'POINT')}"></h3>
-                </div>
+  <div class="col-md-4">
+    <div class="card text-white" style="background-color: #2ecc71;"> <!-- Total Pemasukan → hijau terang -->
+      <div class="card-body">
+        <h5 class="card-title">Total Pemasukan</h5>
+        <h3 th:text="${'Rp ' + #numbers.formatDecimal(totalInflow, 0, 'COMMA', 0, 'POINT')}"></h3>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="card text-white" style="background-color: #e74c3c;"> <!-- Total Pengeluaran → merah terang -->
+      <div class="card-body">
+        <h5 class="card-title">Total Pengeluaran</h5>
+        <h3 th:text="${'Rp ' + #numbers.formatDecimal(totalOutflow, 0, 'COMMA', 0, 'POINT')}"></h3>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="card text-white" style="background-color: #3498db;"> <!-- Saldo → biru terang -->
+      <div class="card-body">
+        <h5 class="card-title">Saldo</h5>
+        <h3 th:text="${'Rp ' + #numbers.formatDecimal(balance, 0, 'COMMA', 0, 'POINT')}"></h3>
+      </div>
+    </div>
+  </div>
+</div>
+
               </div>
             </div>
           </div>
